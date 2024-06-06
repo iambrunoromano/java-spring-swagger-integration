@@ -11,9 +11,11 @@ To integrate Swagger on a Java Spring Boot application you need to paste the fol
     <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
 ```
-and to set the following properties in the `application.properties` file:
+In certain environments the swagger will appear just by the insertion of the dependencies, but won't in others.
+To make it appear regardless of the environment you need to set the following properties in the `application.properties` file:
 ```
 #SWAGGER
 springdoc.swagger-ui.enabled=true
 springdoc.api-docs.enabled=true
 ```
+The Swagger will be available at `http://localhost:{be-port-number}/swagger-ui.html`
